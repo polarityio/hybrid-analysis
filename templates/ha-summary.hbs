@@ -1,0 +1,22 @@
+{{#each details as |object|}}
+    {{#if object.threat_score}}
+    <span class="integration-summary-tag integration-background-color integration-border-color">
+       <span class="acronym integration-text-bold-color">{{block.acronym}}</span>
+       <span class="integration-text-color">Threat Score: {{object.threat_score}}</span>
+    </span>
+    {{/if}}
+    
+    {{#if object.verdict}}
+    <span class="integration-summary-tag integration-background-color integration-border-color">
+       <span class="acronym integration-text-bold-color">{{block.acronym}}</span>
+       <span class="integration-text-color">{{object.verdict}}</span>
+    </span>
+    {{/if}}
+
+    {{#if object.vx_family}}
+    <span class="integration-summary-tag integration-background-color integration-border-color">
+       <span class="acronym integration-text-bold-color">{{block.acronym}}</span>
+       <span class="integration-text-color">{{object.vx_family}}</span>
+    </span>
+    {{/if}}
+{{/each}}
