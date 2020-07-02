@@ -1,11 +1,10 @@
 {
   "main": "./integration.js",
   "name": "HybridAnalysis",
-  "version": "3.0.0-beta",
+  "version": "3.1.0-beta",
   "private": true,
   "dependencies": {
-    "request": "^2.88",
-    "lodash": "^4.17.11",
-    "async": "^2.6"
+    "request": "^2.88.2",
+    "async": "^3.2.0"
   }
 }
