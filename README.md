@@ -1,10 +1,11 @@
 # Polarity Hybrid Analysis Integration
 
-The Polarity - Hybrid Analysis integration searches Hybrid Analysis for information on malware. Hybrid Analysis is a free malware analysis service for the community that detects and analyzes unknown threats using a unique Hybrid Analysis technology.
+The Polarity - Hybrid Analysis integration searches Hybrid Analysis for information on malware.  The integration will display any results that have a valid job id (i.e., the Hybrid Analysis scan completed).
+ 
+ Hybrid Analysis is a free malware analysis service for the community that detects and analyzes unknown threats using a unique Hybrid Analysis technology.
 
-Check out the integration in action below:
-
-![hybrid](https://user-images.githubusercontent.com/22529325/60619075-d037e700-9da5-11e9-8d5f-a106f603c57a.gif)
+<img src="assets/overlay1.png" width="50%">
+<img src="assets/overlay2.png" width="50%">
 
 To learn more about Hybrid Analysis, please visit: [official website](https://www.hybrid-analysis.com)
 
