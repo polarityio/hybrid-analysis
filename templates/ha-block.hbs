@@ -1,94 +1,94 @@
-<div class="p-non-exfoliate-outer-padding">
-{{#each details as |object index|}}
-  {{#if object.job_id}}
-  <div>
-    <a href="https://hybrid-analysis.com/sample/{{object.sha256}}/{{object.job_id}}" class="p-link">(Pivot To Analysis Details)</a>
-  </div>
-
-  <h1 class="p-title">
-      {{fa-icon "eye" fixedWidth=true}}  Analysis #{{inc index}} Summary
-  </h1>
-
-  <div>
-      <span class="p-key">File Type: </span>
-      <span class="p-value">{{object.type}}</span>
-  </div>
-
-  <div>
-      <span class="p-key">Filename: </span>
-      <span class="p-value">{{object.submit_name}}</span>
-  </div>
-
-  <div>
-      <span class="p-key">File Size: </span>
-      <span class="p-value">{{object.size}} bytes</span>
-  </div>
-
-  <div>
-      <span class="p-key">AV Detection: </span>
-      <span class="p-value">{{object.av_detect}}%</span>
-  </div>
-
-  {{#if object.vx_family}}
-  <div>
-      <span class="p-key">Labeled As: </span>
-      <span class="p-value">{{object.vx_family}}</span>
-  </div>
+{{#each details as |scan index|}}
+  {{#if (gt index 0)}}
+    <hr>
   {{/if}}
+  {{#if scan.job_id}}
+    <div>
+      <a href="https://hybrid-analysis.com/sample/{{scan.sha256}}/{{scan.job_id}}" class="p-link">(Pivot To Analysis Details)</a>
+    </div>
 
-  <div>
-      <span class="p-key">Analysis Time: </span>
-      <span class="p-value">{{object.analysis_start_time}}</span>
-  </div>
-
-  <div>
-      <span class="p-key">Threat Score: </span>
-      <span class="p-value">{{object.threat_score}}/100</span>
-  </div>
-
-  <div>
-      <span class="p-key">Interesting: </span>
-      <span class="p-value">{{object.interesting}}</span>
-  </div>
-
-  <div>
-      <span class="p-key">Threat Level: </span>
-      <span class="p-value">{{object.threat_level}}</span>
-  </div>
-
-  <div>
-      <span class="p-key">Verdict: </span>
-      <span class="p-value">{{object.verdict}}</span>
-  </div>
-
-  {{#if object.mitre_attcks}}
     <h1 class="p-title">
-      {{fa-icon "table" fixedWidth=true}}  MITRE ATT&CK™ Techniques Detection
+        {{fa-icon "eye" fixedWidth=true}}  Scan #{{scan.__count}} Summary
     </h1>
-    {{#each object.mitre_attcks as |attck|}}
-      <div>
-        <span class="p-key">Tactic: </span>
-        <span class="p-value">{{attck.tactic}}</span>
-      </div>
 
-      <div>
-        <span class="p-key">Technique: </span>
-        <span class="p-value">{{attck.technique}}</span>
-      </div>
+    <div>
+        <span class="p-key">File Type: </span>
+        <span class="p-value">{{scan.type}}</span>
+    </div>
 
-      <div>
-        <span class="p-key">ID: </span>
-        <span class="p-value">{{attck.attck_id}}</span>
-      </div>
+    <div>
+        <span class="p-key">Filename: </span>
+        <span class="p-value">{{scan.submit_name}}</span>
+    </div>
 
-      <div>
-        <span class="p-key">Reference: </span>
-        <span class="p-value"><a href="{{attck.attck_id_wiki}}" class="p-link">{{attck.attck_id_wiki}}</a></span>
-      </div>
-      <br>
-    {{/each}}
-  {{/if}}
-  <hr>
+    <div>
+        <span class="p-key">File Size: </span>
+        <span class="p-value">{{scan.size}} bytes</span>
+    </div>
+
+    <div>
+        <span class="p-key">AV Detection: </span>
+        <span class="p-value">{{scan.av_detect}}%</span>
+    </div>
+
+    {{#if scan.vx_family}}
+    <div>
+        <span class="p-key">Labeled As: </span>
+        <span class="p-value">{{scan.vx_family}}</span>
+    </div>
+    {{/if}}
+
+    <div>
+        <span class="p-key">Analysis Time: </span>
+        <span class="p-value">{{scan.analysis_start_time}}</span>
+    </div>
+
+    <div>
+        <span class="p-key">Threat Score: </span>
+        <span class="p-value">{{scan.threat_score}}/100</span>
+    </div>
+
+    <div>
+        <span class="p-key">Interesting: </span>
+        <span class="p-value">{{scan.interesting}}</span>
+    </div>
+
+    <div>
+        <span class="p-key">Threat Level: </span>
+        <span class="p-value">{{scan.threat_level}}</span>
+    </div>
+
+    <div>
+        <span class="p-key">Verdict: </span>
+        <span class="p-value">{{scan.verdict}}</span>
+    </div>
+
+    {{#if scan.mitre_attcks}}
+      <h1 class="p-title">
+        {{fa-icon "table" fixedWidth=true}}  MITRE ATT&CK™ Techniques Detection
+      </h1>
+      {{#each scan.mitre_attcks as |attck|}}
+        <div>
+          <span class="p-key">Tactic: </span>
+          <span class="p-value">{{attck.tactic}}</span>
+        </div>
+
+        <div>
+          <span class="p-key">Technique: </span>
+          <span class="p-value">{{attck.technique}}</span>
+        </div>
+
+        <div>
+          <span class="p-key">ID: </span>
+          <span class="p-value">{{attck.attck_id}}</span>
+        </div>
+
+        <div>
+          <span class="p-key">Reference: </span>
+          <span class="p-value"><a href="{{attck.attck_id_wiki}}" class="p-link">{{attck.attck_id_wiki}}</a></span>
+        </div>
+        <br>
+      {{/each}}
+    {{/if}}
   {{/if}}
 {{/each}}
-</div>
