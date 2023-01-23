@@ -2,9 +2,8 @@
   "name": "Hybrid Analysis",
   "acronym": "HA",
   "description": "A free malware analysis service for the community that detects and analyzes unknown threats using a unique Hybrid Analysis technology",
-  "entityTypes": [
-    "hash"
-  ],
+  "entityTypes": ["hash"],
+  "defaultColor": "light-pink",
   "block": {
     "component": {
       "file": "./components/ha-block.js"
