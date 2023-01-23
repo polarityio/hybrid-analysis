@@ -1,0 +1,54 @@
+{
+  "name": "Hybrid Analysis",
+  "acronym": "HA",
+  "description": "A free malware analysis service for the community that detects and analyzes unknown threats using a unique Hybrid Analysis technology",
+  "entityTypes": ["hash"],
+  "defaultColor": "light-pink",
+  "block": {
+    "component": {
+      "file": "./components/ha-block.js"
+    },
+    "template": {
+      "file": "./templates/ha-block.hbs"
+    }
+  },
+  "request": {
+    "cert": "",
+    "key": "",
+    "passphrase": "",
+    "ca": "",
+    "proxy": ""
+  },
+  "logging": {
+    "level": "info"
+  },
+  "options": [
+    {
+      "key": "url",
+      "name": "Hybrid Analysis URL",
+      "description": "Base URL for Hybrid Analysis Service",
+      "default": "https://www.hybrid-analysis.com",
+      "type": "text",
+      "userCanEdit": false,
+      "adminOnly": true
+    },
+    {
+      "key": "apiKey",
+      "name": "API Key",
+      "description": "Hybrid Analysis API Key",
+      "default": "",
+      "type": "password",
+      "userCanEdit": true,
+      "adminOnly": false
+    },
+    {
+      "key": "minScore",
+      "name": "Minimum Threat Score",
+      "description": "Minimum threat score to display in the Polarity overlay window (Scale of 1-100)",
+      "default": 50,
+      "type": "number",
+      "userCanEdit": true,
+      "adminOnly": false
+    }
+  ]
+}

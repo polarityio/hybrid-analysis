@@ -1,10 +1,10 @@
 {
-  "main": "./integration.js",
   "name": "HybridAnalysis",
-  "version": "3.1.0-beta",
+  "version": "3.1.1-beta",
+  "main": "./integration.js",
   "private": true,
   "dependencies": {
-    "request": "^2.88.2",
-    "async": "^3.2.0"
+    "async": "^3.2.0",
+    "postman-request": "^2.88.1-postman.31"
   }
 }
