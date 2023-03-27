@@ -1,6 +1,6 @@
 {
   "name": "HybridAnalysis",
-  "version": "3.1.1-beta",
+  "version": "3.1.2-beta",
   "main": "./integration.js",
   "private": true,
   "dependencies": {
