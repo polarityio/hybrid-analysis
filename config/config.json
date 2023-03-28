@@ -1,4 +1,5 @@
 {
+  "polarityIntegrationUuid": "cd0b4850-cce1-11ed-aeee-075d3490155d",
   "name": "Hybrid Analysis",
   "acronym": "HA",
   "description": "A free malware analysis service for the community that detects and analyzes unknown threats using a unique Hybrid Analysis technology",
